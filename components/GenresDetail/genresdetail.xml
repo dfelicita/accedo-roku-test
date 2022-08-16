@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="genresdetail" extends="Group">
+	<interface>
+		<field id="genreid" type="string" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/GenresDetail/genresdetail.brs" />
+	<script type="text/brightscript" uri="pkg:/source/HTTPApiClient.brs" />
+	<children>
+    <Label text="Genre:" id="toptitle" width="1820" height="50" horizAlign="center" vertAlign="center" translation="[0,0]" font="font:LargeBoldSystemFont" />
+    <PosterGrid id="movieslist" translation="[0,100]" basePosterSize="[240,240]" itemSpacing="[32,32]" caption1NumLines="1" caption2NumLines="1" numColumns="5" numRows="4" />
+  </children>
+</component>
