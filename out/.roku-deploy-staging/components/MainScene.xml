@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component name="MainScene" extends="Scene">
   <script type="text/brightscript" uri="pkg:/components/mainscene.brs" />
+  <interface>
+    <field id="genderList" type="node" alias="movielist.content" onChange="OnLoadGender" />
+    <field id="movieList" type="node" alias="details.content" onChange="OnLoadMovie" />
+    <field id="genderSelected" type="integer" alwaysNotify="true" alias="movielist.genreid" />
+    <field id="genderSelectedTitle" type="string" alwaysNotify="true" alias="movielist.genreTitle" />
+  </interface>
 	<children>
-        <movielist translation="[50, 50]" id="movieList" />
+        <movielist translation="[50, 50]" id="movielist" visible="false" />
+        <genresdetail translation="[50, 50]" id="details" visible="false" />
+        <BusySpinner id="spinner" translation="[896, 476]" control="start" clockwise="false" spinInterval="1" />
 	</children>
 </component>

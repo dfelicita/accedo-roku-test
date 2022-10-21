@@ -24,9 +24,5 @@ sub loadList(event as object)
 end sub
 
 sub onListItemSelected()
-  screen = CreateObject("roSGScreen")
-  m.port = CreateObject("roMessagePort")     
-  screen.setMessagePort(m.port)
-  scene = screen.CreateScene("Scene")
-  screen.show()     
+    m.top.genreid = m.genresList.content.getChild(m.genresList.itemFocused).id
 end sub
