@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component name="movielist" extends="Group">
 	<interface>
-		<field id="genreid" type="string" />
+		<field id="genreid" type="integer" alwaysnotify="true" alias="genresList.itemSelected" />
+		<field id="genreTitle" type="string" alwaysnotify="true" />
+		<field id="content" type="node" alias="genresList.content" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/MovieList/movielist.brs" />
 	<script type="text/brightscript" uri="pkg:/source/HTTPApiClient.brs" />
