@@ -25,4 +25,5 @@ end sub
 
 sub onListItemSelected()
     m.top.genreid = m.genresList.content.getChild(m.genresList.itemFocused).id
+    m.top.genreTitle = m.genresList.content.getChild(m.genresList.itemFocused).title
 end sub

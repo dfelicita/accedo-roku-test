@@ -26,3 +26,19 @@ sub onGenderSelect()
   m.list.visible = "false"
   m.spinner.visible = "true"
 end sub
+
+Function OnKeyEvent(key, press) as Boolean
+    result = false
+    if press then
+        if key = "back"
+            if m.list.visible = false and m.detail.visible = true
+              m.detail.visible = "false"
+              m.detail.setFocus(false)  
+              m.list.visible = "true"
+              m.list.setFocus(true)
+              result = true
+            end if
+        end if
+    end if
+    return result
+End Function
