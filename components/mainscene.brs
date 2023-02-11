@@ -17,12 +17,12 @@ end sub
 sub OnLoadMovie()
   m.spinner.visible = "false"
   m.detail.visible = "true"
-  m.detail.setFocus(true)
+  m.detail.getChild(1).setFocus(true)
 end sub
 
 sub onGenderSelect()
+  m.detail.detailTitle = m.top.genderSelectedTitle
   m.detail.genreid = m.top.genderSelected
-  m.detail.genreTitle = m.top.genderSelectedTitle
   m.list.visible = "false"
   m.spinner.visible = "true"
 end sub
@@ -32,11 +32,12 @@ Function OnKeyEvent(key, press) as Boolean
     if press then
         if key = "back"
             if m.list.visible = false and m.detail.visible = true
-              m.detail.visible = "false"
-              m.detail.setFocus(false)  
-              m.list.visible = "true"
-              m.list.setFocus(true)
+              m.detail.visible = false
+              m.list.visible = true
+              m.top.getChild(1).getChild(1).setFocus(true)
               result = true
+            else
+              result = false
             end if
         end if
     end if

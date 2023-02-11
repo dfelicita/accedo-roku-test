@@ -1,7 +1,6 @@
 sub init()
   m.genresList = m.top.findNode("genresList")
   m.genresList.numRows = 10
-  m.genresList.setFocus(true)
 
   m.request = HTTPApiClient()
   m.request.componentPointer = m
@@ -24,6 +23,6 @@ sub loadList(event as object)
 end sub
 
 sub onListItemSelected()
-    m.top.genreid = m.genresList.content.getChild(m.genresList.itemFocused).id
     m.top.genreTitle = m.genresList.content.getChild(m.genresList.itemFocused).title
+    m.top.genreid = m.genresList.content.getChild(m.genresList.itemFocused).id
 end sub
